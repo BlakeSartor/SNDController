@@ -1,0 +1,42 @@
+Script started on Sat 21 Apr 2018 01:05:27 PM PDT
+mininet@mininet-vm:~/proj3/sdn-controller/question4$ sudo python q4_tree_topo.py  
+*** Creating network
+*** Adding controller
+*** Adding hosts:
+h1 h2 h3 h4 h5 h6 h7 h8 
+*** Adding switches:
+a1 a2 c1 e1 e2 e3 e4 
+*** Adding links:
+(10.00Mbit 10ms delay) (10.00Mbit 10ms delay) (a1, c1) (10.00Mbit 10ms delay) (10.00Mbit 10ms delay) (a2, c1) (40.00Mbit 20ms delay) (40.00Mbit 20ms delay) (e1, a1) (40.00Mbit 20ms delay) (40.00Mbit 20ms delay) (e2, a2) (40.00Mbit 20ms delay) (40.00Mbit 20ms delay) (e3, a2) (40.00Mbit 20ms delay) (40.00Mbit 20ms delay) (e4, a2) (100.00Mbit 30ms delay) (100.00Mbit 30ms delay) (h1, e1) (100.00Mbit 30ms delay) (100.00Mbit 30ms delay) (h2, e1) (100.00Mbit 30ms delay) (100.00Mbit 30ms delay) (h3, e2) (100.00Mbit 30ms delay) (100.00Mbit 30ms delay) (h4, e2) (100.00Mbit 30ms delay) (100.00Mbit 30ms delay) (h5, e3) (100.00Mbit 30ms delay) (100.00Mbit 30ms delay) (h6, e3) (100.00Mbit 30ms delay) (100.00Mbit 30ms delay) (h7, e4) (100.00Mbit 30ms delay) (100.00Mbit 30ms delay) (h8, e4) 
+*** Configuring hosts
+h1 h2 h3 h4 h5 h6 h7 h8 
+*** Starting controller
+c0 
+*** Starting 7 switches
+a1 a2 c1 e1 e2 e3 e4 ...(40.00Mbit 20ms delay) (10.00Mbit 10ms delay) (40.00Mbit 20ms delay) (40.00Mbit 20ms delay) (40.00Mbit 20ms delay) (10.00Mbit 10ms delay) (10.00Mbit 10ms delay) (10.00Mbit 10ms delay) (100.00Mbit 30ms delay) (100.00Mbit 30ms delay) (40.00Mbit 20ms delay) (100.00Mbit 30ms delay) (100.00Mbit 30ms delay) (40.00Mbit 20ms delay) (100.00Mbit 30ms delay) (100.00Mbit 30ms delay) (40.00Mbit 20ms delay) (100.00Mbit 30ms delay) (100.00Mbit 30ms delay) (40.00Mbit 20ms delay) 
+*** Starting CLI:
+mininet> pingall
+*** Ping: testing ping reachability
+h1 -> h2 h3 h4 h5 h6 h7 h8 
+h2 -> h1 h3 h4 h5 h6 h7 h8 
+h3 -> h1 h2 h4 h5 h6 h7 h8 
+h4 -> h1 h2 h3 h5 h6 h7 h8 
+h5 -> h1 h2 h3 h4 h6 h7 h8 
+h6 -> h1 h2 h3 h4 h5 h7 h8 
+h7 -> h1 h2 h3 h4 h5 h6 h8 
+h8 -> h1 h2 h3 h4 h5 h6 h7 
+*** Results: 0% dropped (56/56 received)
+mininet> exit
+*** Stopping 1 controllers
+c0 
+*** Stopping 14 links
+..............
+*** Stopping 7 switches
+a1 a2 c1 e1 e2 e3 e4 
+*** Stopping 8 hosts
+h1 h2 h3 h4 h5 h6 h7 h8 
+*** Done
+mininet@mininet-vm:~/proj3/sdn-controller/question4$ exit
+exit
+
+Script done on Sat 21 Apr 2018 01:06:06 PM PDT

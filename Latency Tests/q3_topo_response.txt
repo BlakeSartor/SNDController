@@ -1,0 +1,29 @@
+
+Finding the throughput of each link was done as follows:
+	- in mininet set up the project 3 topology python file
+	- from there the command 'xterm sX sY' was used to set up two switches, one
+	  as a client and one as a server
+	- to start the server on sY 'iperf -s -p 5566 -i 1 > 
+	  q3_topo_L#_throughput_trial#.txt' 
+	  was used to listen on port 5566 in 1 second intervals while directing
+	  the data to file 'q3_topo_L#_throughput_trial#.txt'
+	- to start the client on sX 'iperf -c 127.0.0.Y -p 5566 -t 15' was used to
+	  send data to sY with IP 127.0.0.Y on port 5566 for 15 seconds
+	- this was done 3 times for each link and the average was found in order to 
+	  approach a more accurate estimation
+
+Finding the latency of each link was done as follows:
+	- with the topology set up, issue the command 'sX ping sY > 
+	  q3_topo_L#_latency_trial#.txt'
+	- the RTT was used to estimate link latency for each link and the average 
+	  was found in order to approach a more accurate estimation, though the use of ping does
+	  not always provide the most accurate estimate of network latency
+
+Estimated Results:
+
+			     Link    | Throughput (Mbps) | Latency (ms)
+			------------------------------------------------
+			  L1 (S1,S2) |        18.9       |    80.584
+			  L2 (S2,S3) |	      38.2       |    20.394
+			  L3 (S3,S4) |	      28.5       |    40.454
+			  L4 (S3,S5) |	      19.0       |    60.464
